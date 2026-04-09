@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GooglyEyeIT - Professional Eye Enhancement Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <h1>
+            <canvas id="googlyLogo" class="header-logo" width="100" height="100"></canvas>
+            Googly Eye IT
+        </h1>
+        <p class="tagline">Enterprise-Grade Ocular Enhancement Platform</p>
+    </header>
+
+    <main>
+        <section class="api-key-section">
+            <label for="apiKey">Google Gemini API Key</label>
+            <div class="api-key-wrapper">
+                <input type="password" id="apiKey" placeholder="Paste your free API key here" autocomplete="off">
+                <button id="toggleKey" class="toggle-key-btn" title="Show/hide key">👁️</button>
+            </div>
+            <p class="hint">Get a free key at <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a></p>
+        </section>
+
+        <section class="upload-section">
+            <div id="dropZone" class="drop-zone">
+                <div class="drop-zone-content">
+                    <div class="upload-icon">📸</div>
+                    <p>Drop your victim here</p>
+                    <p class="small">or click to select a file</p>
+                </div>
+                <input type="file" id="fileInput" accept="image/*" hidden>
+            </div>
+        </section>
+
+        <div id="previewSection" class="preview-section hidden">
+            <div class="image-compare">
+                <div class="image-card">
+                    <h3>Before (Boring)</h3>
+                    <img id="originalImage" alt="Original boring image">
+                </div>
+                <div class="arrow">→</div>
+                <div class="image-card">
+                    <h3>After (Enhanced)</h3>
+                    <div id="resultContainer" class="result-container">
+                        <div id="loading" class="loading hidden">
+                            <div class="googly-loader">
+                                <div class="loader-eye left"></div>
+                                <div class="loader-eye right"></div>
+                            </div>
+                            <p>Applying cutting-edge ocular technology...</p>
+                        </div>
+                        <img id="resultImage" alt="Professionally enhanced image" class="hidden">
+                    </div>
+                </div>
+            </div>
+            <div class="actions">
+                <button id="googlyBtn" class="btn-googly">👀 GOOGLY-FY IT</button>
+                <button id="downloadBtn" class="btn-download hidden">💾 Save Masterpiece</button>
+                <button id="resetBtn" class="btn-reset hidden">🔄 Googly Something Else</button>
+            </div>
+        </div>
+
+        <div id="errorMessage" class="error hidden"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GooglyEyeIT &mdash; Making the world a better place, two googly eyes at a time.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

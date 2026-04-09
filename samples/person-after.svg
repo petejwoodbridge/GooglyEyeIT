@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50"/>
+      <stop offset="100%" style="stop-color:#1a252f"/>
+    </linearGradient>
+    <radialGradient id="skinGrad2" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" style="stop-color:#f0c8a0"/>
+      <stop offset="100%" style="stop-color:#d4a574"/>
+    </radialGradient>
+    <linearGradient id="shirtGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db"/>
+      <stop offset="100%" style="stop-color:#2471a3"/>
+    </linearGradient>
+    <filter id="softShadow2">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="googlyDrop">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <rect width="400" height="500" fill="url(#bgGrad2)"/>
+  <circle cx="50" cy="80" r="30" fill="#fff" opacity="0.03"/>
+  <circle cx="350" cy="120" r="45" fill="#fff" opacity="0.04"/>
+  <circle cx="320" cy="400" r="50" fill="#fff" opacity="0.02"/>
+  <!-- Body/Shirt -->
+  <path d="M130 290 Q120 340 110 500 L290 500 Q280 340 270 290 Q240 270 200 265 Q160 270 130 290Z" fill="url(#shirtGrad2)" filter="url(#softShadow2)"/>
+  <path d="M170 275 L200 300 L230 275" fill="none" stroke="#1a5276" stroke-width="3"/>
+  <!-- Button googly eyes -->
+  <circle cx="200" cy="340" r="8" fill="white" stroke="#555" stroke-width="1.5"/>
+  <circle cx="202" cy="343" r="4" fill="#111"/>
+  <circle cx="200" cy="390" r="8" fill="white" stroke="#555" stroke-width="1.5"/>
+  <circle cx="198" cy="393" r="4" fill="#111"/>
+  <circle cx="200" cy="440" r="8" fill="white" stroke="#555" stroke-width="1.5"/>
+  <circle cx="203" cy="442" r="4" fill="#111"/>
+  <!-- Neck -->
+  <rect x="183" y="240" width="34" height="40" fill="url(#skinGrad2)" rx="5"/>
+  <!-- Head -->
+  <ellipse cx="200" cy="180" rx="65" ry="75" fill="url(#skinGrad2)" filter="url(#softShadow2)"/>
+  <!-- Hair -->
+  <path d="M135 170 Q135 100 200 90 Q265 100 265 170 Q260 140 240 130 Q220 125 200 128 Q180 125 160 130 Q140 140 135 170Z" fill="#2c1810"/>
+  <path d="M135 170 Q138 160 145 155" fill="none" stroke="#1f120a" stroke-width="2"/>
+  <path d="M265 170 Q262 160 255 155" fill="none" stroke="#1f120a" stroke-width="2"/>
+  <!-- Eyebrows (raised in surprise) -->
+  <path d="M160 148 Q175 138 192 145" stroke="#2c1810" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M208 145 Q225 138 240 148" stroke="#2c1810" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- MASSIVE GOOGLY EYES -->
+  <g filter="url(#googlyDrop)">
+    <circle cx="175" cy="168" r="28" fill="white" stroke="#555" stroke-width="3"/>
+    <circle cx="168" cy="178" r="14" fill="#111"/>
+    <circle cx="164" cy="162" r="5" fill="white" opacity="0.7"/>
+  </g>
+  <g filter="url(#googlyDrop)">
+    <circle cx="228" cy="165" r="30" fill="white" stroke="#555" stroke-width="3"/>
+    <circle cx="238" cy="175" r="15" fill="#111"/>
+    <circle cx="224" cy="158" r="5.5" fill="white" opacity="0.7"/>
+  </g>
+  <!-- Nose -->
+  <path d="M197 185 Q194 197 190 202 Q196 205 200 205 Q204 205 210 202 Q206 197 203 185" fill="#d4a070" stroke="none"/>
+  <!-- Mouth (shocked) -->
+  <ellipse cx="200" cy="222" rx="12" ry="8" fill="#8B4513" stroke="#6d3510" stroke-width="1"/>
+  <!-- Ears with tiny googly eyes -->
+  <ellipse cx="135" cy="178" rx="10" ry="15" fill="#d4a574"/>
+  <circle cx="135" cy="175" r="6" fill="white" stroke="#555" stroke-width="1"/>
+  <circle cx="133" cy="177" r="3" fill="#111"/>
+  <ellipse cx="265" cy="178" rx="10" ry="15" fill="#d4a574"/>
+  <circle cx="265" cy="175" r="6" fill="white" stroke="#555" stroke-width="1"/>
+  <circle cx="267" cy="177" r="3" fill="#111"/>
+  <!-- Collar got eyes -->
+  <circle cx="172" cy="278" r="6" fill="white" stroke="#555" stroke-width="1"/>
+  <circle cx="170" cy="280" r="3" fill="#111"/>
+  <circle cx="228" cy="278" r="6" fill="white" stroke="#555" stroke-width="1"/>
+  <circle cx="230" cy="280" r="3" fill="#111"/>
+  <text x="200" y="485" text-anchor="middle" fill="#4ecca3" font-family="sans-serif" font-size="13" font-weight="bold">After: LinkedIn-ready</text>
+</svg>

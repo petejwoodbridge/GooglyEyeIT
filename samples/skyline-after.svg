@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="skyGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0533"/>
+      <stop offset="40%" style="stop-color:#2d1b69"/>
+      <stop offset="70%" style="stop-color:#e8734a"/>
+      <stop offset="100%" style="stop-color:#f5a623"/>
+    </linearGradient>
+    <linearGradient id="bldg1b" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#2a2a3e"/>
+    </linearGradient>
+    <linearGradient id="bldg2b" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="waterGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8734a;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#1a0533;stop-opacity:0.8"/>
+    </linearGradient>
+    <filter id="gEyeDrop">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#skyGrad3)"/>
+  <circle cx="50" cy="30" r="1" fill="white" opacity="0.8"/>
+  <circle cx="120" cy="15" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="200" cy="45" r="1" fill="white" opacity="0.7"/>
+  <circle cx="450" cy="25" r="1.5" fill="white" opacity="0.5"/>
+  <circle cx="530" cy="50" r="1" fill="white" opacity="0.8"/>
+  <rect x="0" y="300" width="600" height="100" fill="url(#waterGrad2)"/>
+  <line x1="50" y1="320" x2="90" y2="320" stroke="#f5a623" stroke-width="1" opacity="0.3"/>
+  <line x1="200" y1="340" x2="260" y2="340" stroke="#e8734a" stroke-width="1" opacity="0.2"/>
+  <line x1="400" y1="330" x2="450" y2="330" stroke="#f5a623" stroke-width="1" opacity="0.25"/>
+  <!-- Far buildings -->
+  <rect x="20" y="220" width="40" height="80" fill="#0d0d1a" opacity="0.7"/>
+  <rect x="70" y="200" width="35" height="100" fill="#0d0d1a" opacity="0.7"/>
+  <rect x="480" y="210" width="45" height="90" fill="#0d0d1a" opacity="0.7"/>
+  <rect x="535" y="230" width="50" height="70" fill="#0d0d1a" opacity="0.7"/>
+  <!-- Far building eyes -->
+  <circle cx="33" cy="245" r="8" fill="white" stroke="#555" stroke-width="1.5" filter="url(#gEyeDrop)"/>
+  <circle cx="30" cy="248" r="4" fill="#111"/>
+  <circle cx="50" cy="243" r="9" fill="white" stroke="#555" stroke-width="1.5" filter="url(#gEyeDrop)"/>
+  <circle cx="53" cy="246" r="4.5" fill="#111"/>
+  <!-- Main buildings -->
+  <!-- Tall skyscraper left -->
+  <rect x="120" y="100" width="50" height="200" fill="url(#bldg1b)"/>
+  <rect x="125" y="80" width="40" height="25" fill="#1a1a2e"/>
+  <line x1="145" y1="80" x2="145" y2="60" stroke="#555" stroke-width="3"/>
+  <circle cx="145" cy="57" r="3" fill="#e94560" opacity="0.8"/>
+  <!-- GOOGLY EYES on tall building - windows rearranged as eyes -->
+  <g filter="url(#gEyeDrop)">
+    <circle cx="135" cy="130" r="16" fill="white" stroke="#555" stroke-width="2"/>
+    <circle cx="130" cy="135" r="8" fill="#111"/>
+    <circle cx="128" cy="125" r="3" fill="white" opacity="0.6"/>
+  </g>
+  <g filter="url(#gEyeDrop)">
+    <circle cx="160" cy="128" r="17" fill="white" stroke="#555" stroke-width="2"/>
+    <circle cx="165" cy="133" r="8.5" fill="#111"/>
+    <circle cx="158" cy="122" r="3" fill="white" opacity="0.6"/>
+  </g>
+  <!-- Some remaining windows -->
+  <g opacity="0.7">
+    <rect x="127" y="190" width="6" height="4" fill="#ffd700" opacity="0.9"/>
+    <rect x="147" y="190" width="6" height="4" fill="#ffd700" opacity="0.5"/>
+    <rect x="127" y="210" width="6" height="4" fill="#ffd700" opacity="0.4"/>
+    <rect x="157" y="210" width="6" height="4" fill="#ffd700" opacity="0.8"/>
+    <rect x="137" y="250" width="6" height="4" fill="#ffd700" opacity="0.6"/>
+    <rect x="157" y="250" width="6" height="4" fill="#ffd700" opacity="0.4"/>
+    <rect x="127" y="270" width="6" height="4" fill="#ffd700" opacity="0.7"/>
+  </g>
+  <!-- Wide building center -->
+  <rect x="200" y="150" width="80" height="150" fill="url(#bldg2b)"/>
+  <!-- GOOGLY EYES on wide building -->
+  <g filter="url(#gEyeDrop)">
+    <circle cx="225" cy="185" r="20" fill="white" stroke="#555" stroke-width="2.5"/>
+    <circle cx="218" cy="192" r="10" fill="#111"/>
+    <circle cx="216" cy="178" r="4" fill="white" opacity="0.6"/>
+  </g>
+  <g filter="url(#gEyeDrop)">
+    <circle cx="262" cy="182" r="22" fill="white" stroke="#555" stroke-width="2.5"/>
+    <circle cx="270" cy="190" r="11" fill="#111"/>
+    <circle cx="258" cy="174" r="4" fill="white" opacity="0.6"/>
+  </g>
+  <!-- Mouth on wide building -->
+  <path d="M230 240 Q245 255 260 240" stroke="#e94560" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <!-- Some windows -->
+  <g opacity="0.6">
+    <rect x="208" y="260" width="8" height="5" fill="#ffd700" opacity="0.7"/>
+    <rect x="236" y="260" width="8" height="5" fill="#ffd700" opacity="0.5"/>
+    <rect x="264" y="260" width="8" height="5" fill="#ffd700" opacity="0.8"/>
+    <rect x="222" y="280" width="8" height="5" fill="#ffd700" opacity="0.4"/>
+  </g>
+  <!-- Supertall tower -->
+  <rect x="330" y="60" width="40" height="240" fill="#1a1a2e"/>
+  <polygon points="335,60 350,25 365,60" fill="#16213e"/>
+  <line x1="350" y1="25" x2="350" y2="10" stroke="#666" stroke-width="2"/>
+  <circle cx="350" cy="8" r="3" fill="#e94560" opacity="0.9"/>
+  <!-- MASSIVE GOOGLY EYES on supertall -->
+  <g filter="url(#gEyeDrop)">
+    <circle cx="340" cy="90" r="14" fill="white" stroke="#555" stroke-width="2"/>
+    <circle cx="336" cy="95" r="7" fill="#111"/>
+    <circle cx="334" cy="84" r="2.5" fill="white" opacity="0.6"/>
+  </g>
+  <g filter="url(#gEyeDrop)">
+    <circle cx="362" cy="88" r="15" fill="white" stroke="#555" stroke-width="2"/>
+    <circle cx="367" cy="93" r="7.5" fill="#111"/>
+    <circle cx="360" cy="82" r="2.5" fill="white" opacity="0.6"/>
+  </g>
+  <!-- Windows on supertall -->
+  <g opacity="0.7">
+    <rect x="336" y="140" width="5" height="3" fill="#ffd700" opacity="0.6"/>
+    <rect x="360" y="140" width="5" height="3" fill="#ffd700" opacity="0.9"/>
+    <rect x="348" y="170" width="5" height="3" fill="#ffd700" opacity="0.7"/>
+    <rect x="336" y="200" width="5" height="3" fill="#ffd700" opacity="0.5"/>
+    <rect x="360" y="200" width="5" height="3" fill="#ffd700" opacity="0.8"/>
+    <rect x="348" y="230" width="5" height="3" fill="#ffd700" opacity="0.4"/>
+    <rect x="336" y="260" width="5" height="3" fill="#ffd700" opacity="0.7"/>
+    <rect x="360" y="260" width="5" height="3" fill="#ffd700" opacity="0.6"/>
+  </g>
+  <!-- Right building -->
+  <rect x="400" y="180" width="60" height="120" fill="url(#bldg1b)"/>
+  <!-- GOOGLY EYES on right building -->
+  <g filter="url(#gEyeDrop)">
+    <circle cx="418" cy="210" r="16" fill="white" stroke="#555" stroke-width="2"/>
+    <circle cx="413" cy="215" r="8" fill="#111"/>
+    <circle cx="412" cy="204" r="3" fill="white" opacity="0.6"/>
+  </g>
+  <g filter="url(#gEyeDrop)">
+    <circle cx="448" cy="208" r="17" fill="white" stroke="#555" stroke-width="2"/>
+    <circle cx="454" cy="213" r="8.5" fill="#111"/>
+    <circle cx="446" cy="202" r="3" fill="white" opacity="0.6"/>
+  </g>
+  <!-- Remaining windows -->
+  <g opacity="0.6">
+    <rect x="407" y="260" width="7" height="4" fill="#ffd700" opacity="0.9"/>
+    <rect x="446" y="260" width="7" height="4" fill="#ffd700" opacity="0.5"/>
+    <rect x="420" y="280" width="7" height="4" fill="#ffd700" opacity="0.7"/>
+  </g>
+  <!-- Water reflection googly eyes -->
+  <circle cx="145" cy="330" r="8" fill="white" opacity="0.2" stroke="#555" stroke-width="0.5"/>
+  <circle cx="143" cy="333" r="4" fill="#111" opacity="0.15"/>
+  <circle cx="162" cy="328" r="9" fill="white" opacity="0.2" stroke="#555" stroke-width="0.5"/>
+  <circle cx="165" cy="331" r="4.5" fill="#111" opacity="0.15"/>
+  <circle cx="350" cy="325" r="7" fill="white" opacity="0.2" stroke="#555" stroke-width="0.5"/>
+  <circle cx="348" cy="328" r="3.5" fill="#111" opacity="0.15"/>
+  <circle cx="365" cy="323" r="8" fill="white" opacity="0.2" stroke="#555" stroke-width="0.5"/>
+  <circle cx="368" cy="326" r="4" fill="#111" opacity="0.15"/>
+  <text x="300" y="385" text-anchor="middle" fill="#4ecca3" font-family="sans-serif" font-size="13" font-weight="bold">After: THE BUILDINGS ARE ALIVE</text>
+</svg>

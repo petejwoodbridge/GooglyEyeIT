@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50"/>
+      <stop offset="100%" style="stop-color:#1a252f"/>
+    </linearGradient>
+    <radialGradient id="skinGrad" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" style="stop-color:#f0c8a0"/>
+      <stop offset="100%" style="stop-color:#d4a574"/>
+    </radialGradient>
+    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db"/>
+      <stop offset="100%" style="stop-color:#2471a3"/>
+    </linearGradient>
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="500" fill="url(#bgGrad)"/>
+  <!-- Bokeh circles -->
+  <circle cx="50" cy="80" r="30" fill="#fff" opacity="0.03"/>
+  <circle cx="350" cy="120" r="45" fill="#fff" opacity="0.04"/>
+  <circle cx="320" cy="400" r="50" fill="#fff" opacity="0.02"/>
+  <!-- Body/Shirt -->
+  <path d="M130 290 Q120 340 110 500 L290 500 Q280 340 270 290 Q240 270 200 265 Q160 270 130 290Z" fill="url(#shirtGrad)" filter="url(#softShadow)"/>
+  <!-- Collar -->
+  <path d="M170 275 L200 300 L230 275" fill="none" stroke="#1a5276" stroke-width="3"/>
+  <!-- Neck -->
+  <rect x="183" y="240" width="34" height="40" fill="url(#skinGrad)" rx="5"/>
+  <!-- Head -->
+  <ellipse cx="200" cy="180" rx="65" ry="75" fill="url(#skinGrad)" filter="url(#softShadow)"/>
+  <!-- Hair -->
+  <path d="M135 170 Q135 100 200 90 Q265 100 265 170 Q260 140 240 130 Q220 125 200 128 Q180 125 160 130 Q140 140 135 170Z" fill="#2c1810"/>
+  <path d="M135 170 Q138 160 145 155" fill="none" stroke="#1f120a" stroke-width="2"/>
+  <path d="M265 170 Q262 160 255 155" fill="none" stroke="#1f120a" stroke-width="2"/>
+  <!-- Eyebrows -->
+  <path d="M165 155 Q175 148 190 152" stroke="#2c1810" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M210 152 Q225 148 235 155" stroke="#2c1810" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Eyes -->
+  <ellipse cx="178" cy="170" rx="12" ry="8" fill="white"/>
+  <circle cx="180" cy="170" r="5" fill="#4a3728"/>
+  <circle cx="181" cy="169" r="2" fill="#111"/>
+  <circle cx="177" cy="167" r="1.5" fill="white" opacity="0.8"/>
+  <ellipse cx="222" cy="170" rx="12" ry="8" fill="white"/>
+  <circle cx="220" cy="170" r="5" fill="#4a3728"/>
+  <circle cx="219" cy="169" r="2" fill="#111"/>
+  <circle cx="217" cy="167" r="1.5" fill="white" opacity="0.8"/>
+  <!-- Nose -->
+  <path d="M197 178 Q194 190 190 195 Q196 198 200 198 Q204 198 210 195 Q206 190 203 178" fill="#d4a070" stroke="none"/>
+  <!-- Mouth -->
+  <path d="M185 210 Q192 218 200 218 Q208 218 215 210" stroke="#b5705a" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Ears -->
+  <ellipse cx="135" cy="178" rx="10" ry="15" fill="#d4a574"/>
+  <ellipse cx="265" cy="178" rx="10" ry="15" fill="#d4a574"/>
+  <!-- Jaw shadow -->
+  <path d="M140 200 Q155 250 200 255 Q245 250 260 200" fill="none" stroke="#c49060" stroke-width="1" opacity="0.5"/>
+  <text x="200" y="485" text-anchor="middle" fill="#7f8c8d" font-family="sans-serif" font-size="13">Before: Professional headshot</text>
+</svg>

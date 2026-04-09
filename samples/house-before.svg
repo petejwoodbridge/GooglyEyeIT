@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#87ceeb"/>
+  <!-- Sun -->
+  <circle cx="330" cy="70" r="40" fill="#FFD700"/>
+  <!-- Ground -->
+  <rect x="0" y="280" width="400" height="120" fill="#4a7c3f"/>
+  <!-- House body -->
+  <rect x="100" y="180" width="200" height="120" fill="#d4956a" stroke="#8B6914" stroke-width="2"/>
+  <!-- Roof -->
+  <polygon points="80,185 200,90 320,185" fill="#8B2500" stroke="#5a1a00" stroke-width="2"/>
+  <!-- Door -->
+  <rect x="175" y="230" width="50" height="70" fill="#5a3a1a" stroke="#3d2b1f" stroke-width="2"/>
+  <circle cx="215" cy="268" r="4" fill="#FFD700"/>
+  <!-- Windows -->
+  <rect x="120" y="210" width="40" height="35" fill="#87ceeb" stroke="#555" stroke-width="2"/>
+  <line x1="140" y1="210" x2="140" y2="245" stroke="#555" stroke-width="1.5"/>
+  <line x1="120" y1="227" x2="160" y2="227" stroke="#555" stroke-width="1.5"/>
+  <rect x="240" y="210" width="40" height="35" fill="#87ceeb" stroke="#555" stroke-width="2"/>
+  <line x1="260" y1="210" x2="260" y2="245" stroke="#555" stroke-width="1.5"/>
+  <line x1="240" y1="227" x2="280" y2="227" stroke="#555" stroke-width="1.5"/>
+  <!-- Cloud -->
+  <g>
+    <circle cx="80" cy="60" r="25" fill="white"/>
+    <circle cx="105" cy="50" r="30" fill="white"/>
+    <circle cx="135" cy="55" r="25" fill="white"/>
+    <circle cx="110" cy="65" r="22" fill="white"/>
+  </g>
+  <!-- Tree -->
+  <rect x="340" y="230" width="15" height="60" fill="#5a3a1a"/>
+  <circle cx="347" cy="210" r="35" fill="#2d5a1e"/>
+  <text x="200" y="385" text-anchor="middle" fill="#333" font-family="sans-serif" font-size="14">Before: Soulless real estate photo</text>
+</svg>

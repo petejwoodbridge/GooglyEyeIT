@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#f5f0eb"/>
+  <ellipse cx="180" cy="320" rx="120" ry="30" fill="#ddd" stroke="#bbb" stroke-width="2"/>
+  <path d="M110 200 L120 300 Q180 330 240 300 L250 200 Z" fill="white" stroke="#ccc" stroke-width="2"/>
+  <ellipse cx="180" cy="210" rx="70" ry="18" fill="#4a2c0a"/>
+  <ellipse cx="180" cy="208" rx="65" ry="15" fill="#6b3a12"/>
+  <path d="M250 230 Q300 230 300 265 Q300 300 250 290" fill="none" stroke="#ccc" stroke-width="8" stroke-linecap="round"/>
+  <!-- Steam with googly eyes -->
+  <path d="M160 180 Q155 160 165 140" fill="none" stroke="#ccc" stroke-width="2" opacity="0.6"/>
+  <path d="M180 175 Q175 150 185 130" fill="none" stroke="#ccc" stroke-width="2" opacity="0.5"/>
+  <path d="M200 180 Q195 155 205 135" fill="none" stroke="#ccc" stroke-width="2" opacity="0.4"/>
+  <!-- THE CUP HAS EYES -->
+  <circle cx="155" cy="250" r="22" fill="white" stroke="#555" stroke-width="2"/>
+  <circle cx="148" cy="257" r="11" fill="#111"/>
+  <circle cx="145" cy="245" r="4" fill="white" opacity="0.7"/>
+  <circle cx="210" cy="248" r="24" fill="white" stroke="#555" stroke-width="2"/>
+  <circle cx="218" cy="254" r="12" fill="#111"/>
+  <circle cx="214" cy="242" r="4" fill="white" opacity="0.7"/>
+  <!-- THE HANDLE HAS AN EYE -->
+  <circle cx="295" cy="260" r="14" fill="white" stroke="#555" stroke-width="1.5"/>
+  <circle cx="299" cy="264" r="7" fill="#111"/>
+  <!-- THE SAUCER HAS EYES -->
+  <circle cx="140" cy="315" r="10" fill="white" stroke="#555" stroke-width="1.5"/>
+  <circle cx="137" cy="318" r="5" fill="#111"/>
+  <circle cx="220" cy="313" r="11" fill="white" stroke="#555" stroke-width="1.5"/>
+  <circle cx="224" cy="316" r="5.5" fill="#111"/>
+  <!-- THE COFFEE ITSELF HAS EYES -->
+  <circle cx="165" cy="205" r="8" fill="white" stroke="#555" stroke-width="1"/>
+  <circle cx="163" cy="207" r="4" fill="#111"/>
+  <circle cx="195" cy="204" r="9" fill="white" stroke="#555" stroke-width="1"/>
+  <circle cx="198" cy="206" r="4.5" fill="#111"/>
+  <!-- Cute mouth on cup -->
+  <path d="M170 275 Q182 285 195 275" stroke="#e94560" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <text x="200" y="380" text-anchor="middle" fill="#4ecca3" font-family="sans-serif" font-size="14" font-weight="bold">After: Your coffee is ALIVE</text>
+</svg>
