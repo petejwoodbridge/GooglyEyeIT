@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:ai.google.dev)"
+      "WebFetch(domain:ai.google.dev)",
+      "Bash(mv \"googly tree before and after.png\" \"googly-tree-before-and-after.png\")",
+      "Bash(mv \"googly coffee before and after.png\" \"googly-coffee-before-and-after.png\")",
+      "Bash(mv \"googly skyscrapers before and after.png\" \"googly-skyscrapers-before-and-after.png\")",
+      "Bash(mv \"googly house before and after.png\" \"googly-house-before-and-after.png\")",
+      "Bash(mv \"google eye it logo.png\" \"googly-eye-it-logo.png\")"
     ]
   }
 }

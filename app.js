@@ -1,4 +1,90 @@
-// --- Googly Eye Logo (cursor-following) ---
+// --- Background Googly Eyes (scattered, all follow cursor) ---
+(function initBgEyes() {
+    const canvas = document.getElementById('bgEyes');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+
+    function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', () => { resize(); generateEyes(); });
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    const colors = ['#ff6bca', '#6bffe4', '#ffd66b', '#b36bff', '#ff6b6b', '#6baaff'];
+    let eyes = [];
+
+    function generateEyes() {
+        eyes = [];
+        const area = canvas.width * canvas.height;
+        const count = Math.min(Math.floor(area / 18000), 60);
+        for (let i = 0; i < count; i++) {
+            const r = 12 + Math.random() * 22;
+            eyes.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                r: r,
+                pupilR: r * 0.45,
+                borderColor: colors[Math.floor(Math.random() * colors.length)],
+                opacity: 0.15 + Math.random() * 0.25
+            });
+        }
+    }
+    generateEyes();
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        for (const eye of eyes) {
+            ctx.globalAlpha = eye.opacity;
+
+            // White of eye
+            ctx.beginPath();
+            ctx.arc(eye.x, eye.y, eye.r, 0, Math.PI * 2);
+            ctx.fillStyle = '#fff';
+            ctx.fill();
+            ctx.strokeStyle = eye.borderColor;
+            ctx.lineWidth = 2.5;
+            ctx.stroke();
+
+            // Pupil follows cursor
+            const dx = mouseX - eye.x;
+            const dy = mouseY - eye.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            const maxDist = eye.r - eye.pupilR - 2;
+            const clampedDist = Math.min(dist, maxDist);
+            const angle = Math.atan2(dy, dx);
+            const px = eye.x + Math.cos(angle) * clampedDist;
+            const py = eye.y + Math.sin(angle) * clampedDist;
+
+            ctx.beginPath();
+            ctx.arc(px, py, eye.pupilR, 0, Math.PI * 2);
+            ctx.fillStyle = '#1b1040';
+            ctx.fill();
+
+            // Shine
+            ctx.beginPath();
+            ctx.arc(px - eye.pupilR * 0.25, py - eye.pupilR * 0.3, eye.pupilR * 0.25, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(255,255,255,0.6)';
+            ctx.fill();
+        }
+
+        ctx.globalAlpha = 1;
+        requestAnimationFrame(draw);
+    }
+
+    draw();
+})();
+
+// --- Header Logo Googly Eyes (cursor-following) ---
 (function initGooglyLogo() {
     const canvas = document.getElementById('googlyLogo');
     if (!canvas) return;
@@ -27,13 +113,16 @@
             // White of eye
             ctx.beginPath();
             ctx.arc(eye.cx, eye.cy, eye.r, 0, Math.PI * 2);
-            ctx.fillStyle = '#fff';
+            const grad = ctx.createRadialGradient(eye.cx, eye.cy - 5, 0, eye.cx, eye.cy, eye.r);
+            grad.addColorStop(0, '#ffffff');
+            grad.addColorStop(1, '#e8e0f0');
+            ctx.fillStyle = grad;
             ctx.fill();
-            ctx.strokeStyle = '#555';
+            ctx.strokeStyle = '#ff6bca';
             ctx.lineWidth = 3;
             ctx.stroke();
 
-            // Calculate pupil position toward cursor
+            // Pupil
             const dx = mouseX - eye.cx;
             const dy = mouseY - eye.cy;
             const dist = Math.sqrt(dx * dx + dy * dy);
@@ -43,16 +132,15 @@
             const px = eye.cx + Math.cos(angle) * clampedDist;
             const py = eye.cy + Math.sin(angle) * clampedDist;
 
-            // Pupil
             ctx.beginPath();
             ctx.arc(px, py, eye.pupilR, 0, Math.PI * 2);
-            ctx.fillStyle = '#111';
+            ctx.fillStyle = '#1b1040';
             ctx.fill();
 
             // Shine
             ctx.beginPath();
             ctx.arc(px - 3, py - 4, 3.5, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(255,255,255,0.7)';
+            ctx.fillStyle = 'rgba(255,255,255,0.8)';
             ctx.fill();
         }
 
@@ -62,6 +150,7 @@
     draw();
 })();
 
+// --- App Logic ---
 const apiKeyInput = document.getElementById('apiKey');
 const toggleKeyBtn = document.getElementById('toggleKey');
 const dropZone = document.getElementById('dropZone');
@@ -133,7 +222,7 @@ function handleFile(file) {
         downloadBtn.classList.add('hidden');
         resetBtn.classList.add('hidden');
         loading.classList.add('hidden');
-        resultContainer.style.background = '#111';
+        resultContainer.style.background = 'rgba(13, 33, 55, 0.6)';
         googlyBtn.classList.remove('hidden');
         googlyBtn.disabled = false;
     };
@@ -178,7 +267,7 @@ googlyBtn.addEventListener('click', async () => {
 async function googlyFy(apiKey, base64Image, mimeType) {
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent?key=${apiKey}`;
 
-    const prompt = `Edit this image to add large, comical, white googly eyes with black pupils to EVERY object, person, animal, or thing in the image. The googly eyes should look like classic craft googly eyes — white circles with a smaller black circle inside that looks like it could wobble. Make the eyes cartoonishly large and slightly different sizes for extra comedy. Every single thing that could conceivably have eyes should get them — people, animals, food, furniture, buildings, clouds, everything. The rest of the image should remain completely unchanged. Return ONLY the edited image.`;
+    const prompt = `Edit this image to add googly eyes. For each distinct object, person, animal, or character in the image, add exactly one pair of googly eyes (two eyes side by side). Googly eyes look like classic craft googly eyes — white circles with a smaller black pupil inside. Make them comically large and slightly different sizes for humor. Place them where eyes would naturally go. If there are multiple different objects or characters, each one gets its own pair. The rest of the image must remain completely unchanged. Return ONLY the edited image.`;
 
     const body = {
         contents: [{
